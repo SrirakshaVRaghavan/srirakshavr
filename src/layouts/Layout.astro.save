@@ -1,0 +1,48 @@
+Last login: Mon Aug 24 14:57:11 on ttys000
+srirakshavijayaraghavan@Srirakshas-MacBook-Air ~ % cd ~/srirakshavr
+nano src/layouts/Layout.astro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  UW PICO 5.09             File: src/layouts/Layout.astro             Modified  
+
+                <title>{title}</title>
+
+                <link
+                        href="https://fonts.googleapis.com/css2?family=Philosop$
+                        rel="stylesheet"
+                />
+        </head> 
+        
+        <body>
+                <slot />
+        </body>
+</html>lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                <link rel="icon" href="/favicon.ico" />
+                <meta name="generator" content={Astro.generator} />
+                <title>Astro Basics</title>
+
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  

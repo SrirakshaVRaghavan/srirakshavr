@@ -1,11 +1,128 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+
+		<nav class="scattered-nav">
+			<a href="#about">about</a>
+			<a href="#writing">writing</a>
+			<a href="#projects">projects</a>
+			<a href="#art">art i love</a>
+		</nav>
+
+		<section class="hero">
+			<p class="eyebrow">Hi, I'm Raksha.</p>
+
+			<h1>
+				welcome to my<br />
+				corner of the internet
+			</h1>
+		</section>
+
+		<div class="placeholder">
+			<p>◉</p>
+		</div>
+
+	</main>
 </Layout>
+
+<style>
+	:global(body) {
+		margin: 0;
+		font-family: 'Philosopher', sans-serif;
+		color: #eee5f5;
+		background:
+			radial-gradient(circle at 15% 20%, #5b3b78 0%, transparent 38%),
+			radial-gradient(circle at 85% 15%, #164f61 0%, transparent 35%),
+			radial-gradient(circle at 75% 75%, #285b45 0%, transparent 38%),
+			radial-gradient(circle at 25% 85%, #7b315f 0%, transparent 35%),
+			#16121f;
+		min-height: 100vh;
+	}
+
+	main {
+		position: relative;
+		min-height: 100vh;
+		overflow: hidden;
+	}
+
+	/* SCATTERED NAVIGATION */
+
+	.scattered-nav a {
+		position: absolute;
+		color: #eee5f5;
+		text-decoration: none;
+		font-size: 27px;
+		opacity: 0.9;
+		transition: opacity 0.2s ease;
+	}
+
+	.scattered-nav a:hover {
+		opacity: 0.5;
+	}
+
+	.scattered-nav a:nth-child(1) {
+		top: 18%;
+		left: 14%;
+	}
+
+	.scattered-nav a:nth-child(2) {
+		top: 35%;
+		right: 17%;
+	}
+
+	.scattered-nav a:nth-child(3) {
+		bottom: 25%;
+		left: 20%;
+	}
+
+	.scattered-nav a:nth-child(4) {
+		top: 62%;
+		right: 12%;
+	}
+
+	.scattered-nav a:nth-child(5) {
+		bottom: 12%;
+		left: 48%;
+	}
+
+	/* CENTRAL HERO */
+
+	.hero {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: min(600px, 70vw);
+		text-align: center;
+	}
+
+	.eyebrow {
+		font-size: 40px;
+		margin: 0 0 18px;
+	}
+
+	h1 {
+		font-size: clamp(32px, 3.5vw, 32px);
+		line-height: 1.08;
+		font-weight: 400;
+		margin: 0;
+	}
+
+	/* TEMPORARY EYE PLACEHOLDER */
+
+	.placeholder {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+	}
+
+	.placeholder p {
+		font-size: 24px;
+		opacity: 0.35;
+	}
+</style>
