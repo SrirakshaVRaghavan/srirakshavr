@@ -3,108 +3,77 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<main class="page">
-		<section class="content">
-			<p class="label">writing</p>
+	<main class="secondary-page">
 
-			<h1>Things I've written.</h1>
+		<header class="page-header">
+			<a href="/" class="site-title">Raksha's Pratyaksha</a>
 
-			<p class="intro">
-				Essays, observations, questions, and assorted things I've been
-				thinking about.
-			</p>
+			<nav>
+				<a href="/projects">Projects</a>
+				<a href="/writing">Writing</a>
+				<a href="/contact">Contact</a>
+			</nav>
+		</header>
 
-			<div class="writing-list">
-				<article>
-					<p class="date">2026</p>
-					<h2>Coming soon.</h2>
-					<p>
-						I'm slowly assembling the things I want to put out into the
-						world.
-					</p>
-				</article>
-
-				<article>
-					<p class="date">—</p>
-					<h2>Essayyyyy</h2>
-					<p>
-						Here's to the ones who spend their days workshopping their world view and refining it into everything they put out into the world
-					</p>
-				</article>
-			</div>
+		<section class="page-content">
+			<h1>Under construction 🏗️</h1>
 		</section>
+
 	</main>
 </Layout>
 
 <style>
-		:global(body) {
+	:global(body) {
 		margin: 0;
 		font-family: 'Philosopher', sans-serif;
-		color: #eee5f5;
-		background:
-			radial-gradient(circle at 15% 20%, #5b3b78 0%, transparent 38%),
-			radial-gradient(circle at 85% 15%, #164f61 0%, transparent 35%),
-			radial-gradient(circle at 75% 75%, #285b45 0%, transparent 38%),
-			radial-gradient(circle at 25% 85%, #7b315f 0%, transparent 35%),
-			#16121f;
-		min-height: 100vh;
-	}
-	.page {
+		color: var(--text);
+		background: var(--background);
 		min-height: 100vh;
 	}
 
-	.content {
-		width: min(680px, 80vw);
-		margin: 0 auto;
-		padding: 18vh 0 12vh;
+	.secondary-page {
+		min-height: 100vh;
+		padding: 24px 32px;
+		box-sizing: border-box;
 	}
 
-	.label {
-		font-size: 22px;
-		margin: 0 0 24px;
-		opacity: 0.7;
+	.page-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	h1 {
-		font-size: clamp(42px, 5vw, 68px);
-		line-height: 1.05;
-		font-weight: 400;
-		margin: 0 0 28px;
+	.site-title {
+		color: var(--text);
+		text-decoration: none;
+		font-size: clamp(30px, 3vw, 48px);
 	}
 
-	.intro {
-		font-size: 21px;
-		line-height: 1.5;
-		max-width: 600px;
-		margin: 0 0 80px;
-		opacity: 0.75;
+	nav {
+		display: flex;
+		gap: 70px;
 	}
 
-	.writing-list {
-		border-top: 1px solid rgba(238, 229, 245, 0.3);
+	nav a {
+		color: var(--text);
+		text-decoration: none;
+		font-size: clamp(24px, 2.5vw, 42px);
 	}
 
-	article {
-		padding: 36px 0;
-		border-bottom: 1px solid rgba(238, 229, 245, 0.3);
-	}
-
-	.date {
-		font-size: 16px;
+	nav a:hover,
+	.site-title:hover {
 		opacity: 0.5;
-		margin: 0 0 12px;
 	}
 
-	h2 {
-		font-size: 30px;
+	.page-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: calc(100vh - 120px);
+	}
+
+	.page-content h1 {
+		font-size: clamp(36px, 5vw, 72px);
 		font-weight: 400;
-		margin: 0 0 12px;
-	}
-
-	article p:last-child {
-		font-size: 18px;
-		line-height: 1.5;
-		opacity: 0.7;
-		margin: 0;
 	}
 </style>

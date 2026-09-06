@@ -1,0 +1,281 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="secondary-page">
+
+		<header class="page-header">
+			<a href="/" class="site-title">Raksha's Pratyaksha</a>
+
+			<nav>
+				<a href="/projects">Projects</a>
+				<a href="/writing">Writing</a>
+				<a href="/contact">Contact</a>
+			</nav>
+		</header>
+
+
+		<section class="contact-content">
+
+			<div class="contact-intro">
+				<p>
+					Thanks for wandering in!<br />
+					Come say hello
+				</p>
+			</div>
+
+
+			<div class="spotify">
+		<iframe
+			data-testid="embed-iframe"
+			src="https://open.spotify.com/embed/playlist/0YqTDExNMlVUsd7ULwm30D?utm_source=generator&si=31d5518b3f6f40cf"
+			width="100%"
+			height="352"
+			frameborder="0"
+			allowfullscreen
+			allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+			loading="lazy"
+		></iframe>
+	</div>
+
+
+
+			<div class="social-links">
+
+	<a
+		href="https://x.com/rakshanumiti"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		X
+	</a>
+
+	<a
+		href="https://www.linkedin.com/in/sriraksha-vijaya-raghavan/"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		LinkedIn
+	</a>
+
+	<a
+		href="https://letterboxd.com/SrirakshaVR/"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		Letterboxd
+	</a>
+
+	<a
+		href="https://www.goodreads.com/user/show/21639852-sriraksha"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		Goodreads
+	</a>
+
+</div>
+		</section>
+
+	</main>
+</Layout>
+
+
+<style>
+	:global(body) {
+		margin: 0;
+		font-family: 'Philosopher', sans-serif;
+		color: var(--text);
+		background: var(--background);
+		min-height: 100vh;
+	}
+
+
+	/* PAGE */
+
+	.secondary-page {
+		min-height: 100vh;
+		padding: 24px 32px;
+		box-sizing: border-box;
+	}
+
+
+	/* HEADER */
+
+	.page-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.site-title {
+		color: var(--text);
+		text-decoration: none;
+		font-size: clamp(30px, 3vw, 48px);
+	}
+
+	nav {
+		display: flex;
+		gap: 70px;
+	}
+
+	nav a {
+		color: var(--text);
+		text-decoration: none;
+		font-size: clamp(24px, 2.5vw, 42px);
+	}
+
+	nav a:hover,
+	.site-title:hover {
+		opacity: 0.5;
+	}
+
+
+	/* CONTACT COMPOSITION */
+
+	/* CONTACT COMPOSITION */
+
+.contact-content {
+	min-height: calc(100vh - 120px);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 8vw;
+
+	align-items: center;
+}
+
+
+/* LEFT SIDE */
+
+.contact-left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/* INTRO */
+
+.contact-intro {
+	font-size: clamp(32px, 4vw, 56px);
+	line-height: 1.15;
+}
+
+.contact-intro p {
+	margin: 0;
+}
+
+
+/* SOCIAL LINKS */
+
+.social-links {
+	display: grid;
+	grid-template-columns: auto auto;
+
+	column-gap: 45px;
+	row-gap: 18px;
+
+	margin-top: 70px;
+}
+
+.social-links a {
+	color: var(--text);
+	text-decoration: none;
+	font-size: 26px;
+
+	transition:
+		transform 0.2s ease,
+		opacity 0.2s ease;
+}
+
+.social-links a:hover {
+	opacity: 0.55;
+	transform: translateY(-3px);
+}
+
+
+/* SPOTIFY */
+
+.spotify {
+	width: min(500px, 100%);
+	justify-self: center;
+}
+
+.spotify iframe {
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 12px;
+}
+
+
+	/* SOCIAL LINKS */
+
+	.social-links {
+	grid-column: 1;
+	grid-row: 2;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	column-gap: 45px;
+	row-gap: 18px;
+
+	justify-content: center;
+	align-items: center;
+
+	margin-top: -60px;
+}
+
+.social-links a {
+	color: var(--text);
+	text-decoration: none;
+	font-size: 26px;
+
+	transition:
+		transform 0.2s ease,
+		opacity 0.2s ease;
+}
+
+.social-links a:hover {
+	opacity: 0.55;
+	transform: translateY(-3px);
+}
+
+	/* SMALLER SCREENS */
+
+	@media (max-width: 800px) {
+
+		.contact-content {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+
+			gap: 50px;
+
+			padding-top: 10vh;
+		}
+
+		.contact-intro {
+			grid-column: 1;
+			grid-row: 1;
+
+			justify-self: center;
+			text-align: center;
+		}
+
+		.spotify {
+			grid-column: 1;
+			grid-row: 2;
+
+			width: min(500px, 100%);
+		}
+
+		.social-links {
+			grid-column: 1;
+			grid-row: 3;
+
+			padding-bottom: 5vh;
+		}
+	}
+</style>

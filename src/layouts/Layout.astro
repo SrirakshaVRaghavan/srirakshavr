@@ -11,10 +11,91 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap"
 			rel="stylesheet"
+			
 		/>
+		<link rel="icon" type="image/png" href="/favicon_gandaberunda.png" />
 	</head>
 
 	<body>
+		<div class="theme-controls">
+
+			<button class="theme-button" id="dark-mode-button">
+				<img src="/images/moon.png" alt="Switch to dark mode" />
+			</button>
+
+			<button class="theme-button" id="light-mode-button">
+				<img src="/images/sun.png" alt="Switch to light mode" />
+			</button>
+
+		</div>
+
 		<slot />
+
+		<script>
+			const darkModeButton = document.getElementById('dark-mode-button');
+			const lightModeButton = document.getElementById('light-mode-button');
+
+			darkModeButton?.addEventListener('click', () => {
+				document.documentElement.classList.add('dark-mode');
+			});
+
+			lightModeButton?.addEventListener('click', () => {
+				document.documentElement.classList.remove('dark-mode');
+			});
+		</script>
 	</body>
+
+	<style>
+		/* THEME COLORS */
+
+		:global(:root) {
+			--background: #f3edc9;
+			--text: #5b5a56;
+		}
+
+		:global(.dark-mode) {
+			--background: #1c1b18;
+			--text: #f3edc9;
+		}
+
+
+		/* THEME CONTROLS */
+
+		.theme-controls {
+			position: fixed;
+			top: 18px;
+			left: 18px;
+			right: 18px;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			pointer-events: none;
+			z-index: 100;
+		}
+
+		.theme-button {
+			width: 20px;
+			height: 20px;
+
+			padding: 0;
+			border: none;
+			background: transparent;
+
+			cursor: pointer;
+			pointer-events: auto;
+		}
+
+		.theme-button img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: contain;
+		}
+
+		.theme-button:hover {
+			opacity: 0.7;
+		}
+	</style>
 </html>

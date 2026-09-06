@@ -4,125 +4,324 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<main>
+		<header class="site-header">
+			<h1>Raksha's Pratyaksha</h1>
 
-		<nav class="scattered-nav">
-			<a href="#about">about</a>
-			<a href="#writing">writing</a>
-			<a href="#projects">projects</a>
-			<a href="#art">art i love</a>
-		</nav>
+			<nav>
+				<a href="/projects">Projects</a>
+				<a href="/writing">Writing</a>
+				<a href="/contact">Contact</a>
+			</nav>
+		</header>
 
-		<section class="hero">
-			<p class="eyebrow">Hi, I'm Raksha.</p>
+		<section class="home-content">
 
-			<h1>
-				welcome to my<br />
-				corner of the internet
-			</h1>
+			<!-- ARTWORK GRID -->
+
+			<div class="artwork-grid">
+
+				<!-- LEFT SIDE: TANJORE + THREE SMALL ARTWORKS -->
+
+				<div class="left-artwork">
+
+					<a
+						class="artwork artwork-large"
+						href="https://archive.org/details/indiaillustrated00urwi/page/58/mode/2up"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src="/images/tanjore-brihadeshwara.jpg"
+							alt="Brihadeshwara Temple in Tanjore"
+						/>
+					</a>
+
+					<div class="bottom-artworks">
+
+						<a
+							class="artwork artwork-3"
+							href="https://en.wikipedia.org/wiki/Vaddadi_Papaiah"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="/images/vaddadi-papaiah.jpg"
+								alt="Artwork by Vaddadi Papaiah"
+							/>
+						</a>
+
+						<a
+							class="artwork artwork-4"
+							href="https://www.instagram.com/lera.dubitskaya"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="/images/lera-dubitskaya.jpg"
+								alt="Artwork by Lera Dubitskaya"
+							/>
+						</a>
+
+						<a
+							class="artwork artwork-5"
+							href="https://www.aaronmorse.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="/images/note-to-self.jpg"
+								alt="Note to Self by Aaron Morse"
+							/>
+						</a>
+
+					</div>
+
+				</div>
+
+
+				<!-- RIGHT SIDE: PATTERNS IN THE SKY + DREAMERS -->
+
+				<div class="right-artwork">
+
+					<a
+						class="artwork artwork-2"
+						href="https://artuk.org/discover/stories/patterns-in-the-sky-the-mysterious-landscapes-of-sidney-herbert-sime"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src="/images/patterns-in-the-sky.jpg"
+							alt="Patterns in the Sky by Sidney H. Sime"
+						/>
+					</a>
+
+					<a
+						class="artwork artwork-6"
+						href="https://www.artflute.com/artworks/dreamers"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src="/images/sakti-burman-dreamers.avif"
+							alt="Dreamers by Sakti Burman"
+						/>
+					</a>
+
+				</div>
+
+			</div>
+
+
+			<!-- INTRODUCTION -->
+
+			<div class="introduction">
+
+				<p>
+					Hi!
+					I’m Sriraksha (Raksha) and welcome to my corner of the internet!
+				</p>
+
+				<p>
+					Pratyakṣa means knowing something through direct perception.
+					I’m treating this as a nook to explore and expand upon mine.
+				</p>
+
+				<p>
+					My interests lie in understanding the priors from which our current
+					milieu of ideas and sense making apparatus has emerged, how culture
+					and institutions get constituted, how this feeds into our visual
+					perception and meaning making, and filtered into artificial
+					intelligence and how we instrumentalize it. My interests are pretty
+					wide ranging within art, technology, philosophy, and culture.
+				</p>
+
+				<p>
+					This curiousity has loosesly guided the direction of my work.
+					I started out in electrical engineering and gradually became
+					fascinated by colour science, image quality and the strange
+					business of making machines “see.” Today, I work with pixels and
+					image sensors, tinkering with how cameras capture and represent
+					the world.
+				</p>
+
+				<p>
+					The artwork scattered across this page is a small experiment in
+					perception, based on&nbsp;   
+					<a
+						href="https://www.gestaltprinciples.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						 Gestalt Principles
+					</a>.
+					I am curious about the impression they can provide collectively,
+					and how we can direct attention with that. I also play with a
+					similarish idea in my photography, loosely borrowing from
+					Impressionism and using Instagram as my medium.
+				</p>
+
+				<p>
+					In my spare time, I love philosophizing, photography, writing,
+					cinema, cooking, and can never say no to a meandering walk.
+				</p>
+
+			</div>
+
 		</section>
-
-		<div class="placeholder">
-			<p>◉</p>
-		</div>
-
 	</main>
 </Layout>
 
+
 <style>
-	:global(body) {
-		margin: 0;
-		font-family: 'Philosopher', sans-serif;
-		color: #eee5f5;
-		background:
-			radial-gradient(circle at 15% 20%, #5b3b78 0%, transparent 38%),
-			radial-gradient(circle at 85% 15%, #164f61 0%, transparent 35%),
-			radial-gradient(circle at 75% 75%, #285b45 0%, transparent 38%),
-			radial-gradient(circle at 25% 85%, #7b315f 0%, transparent 35%),
-			#16121f;
-		min-height: 100vh;
-	}
+:global(body) {
+	margin: 0;
+	font-family: 'Philosopher', sans-serif;
+	color: var(--text);
+	background: var(--background);
+	min-height: 100vh;
+}
 
-	main {
-		position: relative;
-		min-height: 100vh;
-		overflow: hidden;
-	}
 
-	/* SCATTERED NAVIGATION */
+/* PAGE */
 
-	.scattered-nav a {
-		position: absolute;
-		color: #eee5f5;
-		text-decoration: none;
-		font-size: 27px;
-		opacity: 0.9;
-		transition: opacity 0.2s ease;
-	}
+main {
+	min-height: 100vh;
+	padding: 24px 32px;
+	box-sizing: border-box;
+}
 
-	.scattered-nav a:hover {
-		opacity: 0.5;
-	}
 
-	.scattered-nav a:nth-child(1) {
-		top: 18%;
-		left: 14%;
-	}
+/* HEADER */
 
-	.scattered-nav a:nth-child(2) {
-		top: 35%;
-		right: 17%;
-	}
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
 
-	.scattered-nav a:nth-child(3) {
-		bottom: 25%;
-		left: 20%;
-	}
+.site-header h1 {
+	font-size: clamp(36px, 4vw, 64px);
+	font-weight: 400;
+	margin: 0;
+}
 
-	.scattered-nav a:nth-child(4) {
-		top: 62%;
-		right: 12%;
-	}
+.site-header nav {
+	display: flex;
+	gap: 70px;
+}
 
-	.scattered-nav a:nth-child(5) {
-		bottom: 12%;
-		left: 48%;
-	}
+.site-header nav a {
+	color: var(--text);
+	text-decoration: none;
+	font-size: clamp(24px, 2.5vw, 42px);
+}
 
-	/* CENTRAL HERO */
+.site-header nav a:hover {
+	opacity: 0.5;
+}
 
-	.hero {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: min(600px, 70vw);
-		text-align: center;
-	}
 
-	.eyebrow {
-		font-size: 40px;
-		margin: 0 0 18px;
-	}
+/* MAIN CONTENT */
 
-	h1 {
-		font-size: clamp(32px, 3.5vw, 32px);
-		line-height: 1.08;
-		font-weight: 400;
-		margin: 0;
-	}
+.home-content {
+	display: grid;
+	grid-template-columns: 2.1fr 1fr;
+	gap: 18px;
+	align-items: start;
+}
 
-	/* TEMPORARY EYE PLACEHOLDER */
 
-	.placeholder {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		pointer-events: none;
-	}
+/* ARTWORK AREA */
 
-	.placeholder p {
-		font-size: 24px;
-		opacity: 0.35;
-	}
+.artwork-grid {
+	display: grid;
+	grid-template-columns: 2.4fr 1fr;
+	gap: 10px;
+	height: calc(100vh - 140px);
+}
+
+
+/* LEFT ARTWORK GROUP */
+
+.left-artwork {
+	display: grid;
+	grid-template-rows: 2.3fr 1fr;
+	gap: 20px;
+	min-height: 0;
+}
+
+
+/* THREE SMALL ARTWORKS */
+
+.bottom-artworks {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	min-height: 0;
+}
+
+
+/* RIGHT ARTWORK GROUP */
+
+.right-artwork {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	gap: 20px;
+	min-height: 0;
+}
+
+
+/* INDIVIDUAL ARTWORK */
+
+.artwork {
+	display: block;
+	overflow: hidden;
+	background: var(--background);
+	min-width: 0;
+	min-height: 0;
+}
+
+.artwork img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: contain;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.artwork:hover img {
+	transform: scale(1.02);
+	opacity: 0.85;
+}
+
+
+/* INTRODUCTION */
+
+.introduction {
+	font-size: clamp(17px, 1.2vw, 27px);
+	line-height: 1.25;
+	padding: 4px 0;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.introduction p {
+	margin: 0 0 18px 0;
+}
+
+.introduction p:last-child {
+	margin-bottom: 0;
+}
+
+.introduction a {
+	color: var(--text);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.introduction a:hover {
+	opacity: 0.55;
+}
 </style>
